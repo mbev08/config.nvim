@@ -64,6 +64,10 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- shift selected text up
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- overwrite move line defaults from LazyVim.
+vim.keymap.del({ "n", "v", "i" }, "<A-j>")
+vim.keymap.del({ "n", "v", "i" }, "<A-k>")
+
 --------------------------------------------------------------------
 -- Shortcuts - Call Other ...
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
